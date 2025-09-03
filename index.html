@@ -1,37 +1,107 @@
-<html>
-    
-    <head>
-        <title>My Web Page</title>
-        <style>
-           
-            body{
-            background-color: rgb(50, 131, 142);
-            color : white;
-            font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
-        h1{
-            color: whitesmoke;
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa; 
+            padding: 20px;
         }
-        h2{
-            color: whitesmoke;
+
+        .profile-container {
+            max-width: 600px;
+            margin: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
         }
-        button{
-            background:blueviolet ;
+
+        .profile-header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .profile-pic {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        h2 {
+            margin: 10px 0;
+            color: #00796b; 
+        }
+
+        .profile-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: #4caf50; /* Green button */
+            color: white;
+            padding: 10px;
             border: none;
-            color: whitesmoke;
-            border-radius: 15px;
-            padding: 10px 20px;
-             cursor: pointer;
-             transition: background-color 0.3s; 
-            }
-        
-        </style>
-    </head>
-    <body>
-        <h1>My Web Page</h1>
-        <h2>About Me</h2>
-        <p><em><strong>Nayasha Mwale is a dedicated student at Africa University, pursuing a degree in Information.<br/>With a passion for technology and problem-solving, Nayasha is always eager to dive into the latest innovations.<br/> When not buried in code or project work, you might find them pondering the age-old question:<br/> "Why do programmers prefer dark mode? Because light attracts bugs!"</strong></em></p>
-        <button>Click here to learn more</button>
-        
-    </body>
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #388e3c; 
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h1>Profile Page</h1>
+        <div class="profile-header">
+            <img src="profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+            <h2>nayasha mwale</h2>
+            <p>Email: nayasha mwale.com</p>
+        </div>
+
+        <form class="profile-form">
+            <h3>Update Profile</h3>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="nayasha mwale">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" value="nayasha mwale.com">
+
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" rows="4">A l am a female student doing CIS at Africa University.</textarea>
+
+            <button type="submit">Update Profile</button>
+        </form>
+    </div>
+</body>
 </html>
